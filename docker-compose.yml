@@ -1,0 +1,11 @@
+version: "3.5"
+
+services:
+  taskbot:
+    image: ghcr.io/igamingsolutions/taskbot:latest
+    container_name: taskbot
+    env_file:
+      - .env
+    command: ["/bin/bash", "./entrypoint.sh"]
+    restart: always
+    tty: true
